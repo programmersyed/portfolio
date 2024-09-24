@@ -1,0 +1,138 @@
+/* Global reset for margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    height: 100%;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    background-color: #333;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .navbar-item {
+    display: inline;
+  }
+  
+  .navbar-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-item a:hover {
+    background-color: #555;
+    border-radius: 5px;
+  }
+  
+  /* Adjust the rest of the page to account for the fixed navbar */
+  .landing-page {
+    padding-top: 60px; /* This prevents the content from hiding under the fixed navbar */
+  }
+  
+  /* Home Section (Full Screen) */
+  .home-section {
+    margin: 0;
+    padding: 0;
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  /* About Section */
+  .about-section {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .about-section h2 {
+    margin-bottom: 20px;
+  }
+  
+  .about-section p {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Portfolio Section */
+  .portfolio-section {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .portfolio-section h2 {
+    margin-bottom: 20px;
+  }
+  
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .project-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .contact-section h2 {
+    margin-bottom: 20px;
+  }
+  
+  .contact-section p {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Footer */
+  .landing-footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Link Styles */
+  a {
+    color: #61dafb;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

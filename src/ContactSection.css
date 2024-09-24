@@ -1,0 +1,99 @@
+/* Contact Section */
+.contact-section {
+  background: linear-gradient(135deg, #1c1e22, #2b2d31); /* Matching gradient background */
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 100vh; /* Full-screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05); /* Subtle overlay */
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Soft shadow */
+  opacity: 0;
+  transform: translateX(-100%) scale(0.8); /* Start off-screen and smaller */
+  animation: slideInScale 1.2s ease-out forwards;
+}
+
+/* Unique animation: slide in and scale */
+@keyframes slideInScale {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) scale(0.8); /* Start fully off-screen and smaller */
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(20px) scale(1.05); /* Overshoot slightly for effect */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1); /* End at normal size in place */
+  }
+}
+
+/* Headings */
+h2 {
+  font-size: 3.5rem;
+  color: #ffcc00; /* Bright yellow for emphasis */
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #b0b0b0; /* Softer white color for body text */
+  margin-bottom: 15px;
+}
+
+/* Links Styling */
+.contact-info a {
+  color: #61dafb; /* Accent color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #ffcc00; /* Yellow on hover */
+}
+
+/* Animated underline effect */
+h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #ffcc00;
+  margin: 10px auto 0;
+  animation: expand 0.6s ease forwards;
+}
+
+@keyframes expand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-content {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .contact-info p {
+    font-size: 1.2rem;
+  }
+}

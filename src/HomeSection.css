@@ -1,0 +1,87 @@
+/* Home Section (Full Screen) */
+.home-section {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1c1e22, #2b2d31); /* Matching gradient background */
+    color: #ffffff;
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .home-content {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Add space between the image and the text */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05); /* Subtle background effect */
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Subtle shadow */
+    opacity: 0;
+    transform: translateX(-100%) scale(0.8); /* Start off-screen and smaller */
+    animation: slideInScale 1.2s ease-out forwards;
+  }
+  
+  /* Unique slide-in with scale animation */
+  @keyframes slideInScale {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%) scale(0.8); /* Off-screen and smaller */
+    }
+    60% {
+      opacity: 1;
+      transform: translateX(20px) scale(1.05); /* Slight overshoot */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0) scale(1); /* Normal position and size */
+    }
+  }
+  
+  /* Profile Image Styling */
+  .profile-image {
+    width: 250px;
+    height: auto;
+    border-radius: 15px; /* Softer corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.1); /* Add a soft border */
+  }
+  
+  /* Text Styling */
+  .text-content {
+    text-align: left;
+  }
+  
+  h1 {
+    font-size: 4rem; /* Larger font */
+    font-weight: 600;
+    margin: 0;
+    color: #ffcc00; /* Brighter accent color */
+  }
+  
+  .animated-text {
+    font-size: 2rem;
+    color: #61dafb; /* Light blue accent color */
+    margin-top: 10px;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .home-content {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    h1 {
+      font-size: 3rem;
+    }
+  
+    .animated-text {
+      font-size: 1.5rem;
+    }
+  }
+  
